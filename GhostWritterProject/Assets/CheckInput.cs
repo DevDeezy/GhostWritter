@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CheckInput : MonoBehaviour
 {
     public GameObject label;
+    public GameObject hero;
+    public GameObject enemy;
     public InputField input;
     public string[] letra = {"Tequila ","Tequila ", "Tequila "};
     public string[] letraEcra = {"Tequila ","Tequila ", "Tequila "};

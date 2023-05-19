@@ -5123,6 +5123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 1963784761}
+  hero: {fileID: 2077132771}
+  enemy: {fileID: 0}
   input: {fileID: 1013538547}
   letra:
   - 'Tequila '
@@ -8189,6 +8191,7 @@ GameObject:
   - component: {fileID: 1924388581}
   - component: {fileID: 1924388583}
   - component: {fileID: 1924388582}
+  - component: {fileID: 1924388584}
   m_Layer: 5
   m_Name: Enemy
   m_TagString: Untagged
@@ -8254,6 +8257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924388580}
   m_CullTransparentMesh: 1
+--- !u!114 &1924388584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924388580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd179d33d43158b41ab045d9f882de63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943488867
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,6 +8778,7 @@ GameObject:
   - component: {fileID: 2077132772}
   - component: {fileID: 2077132774}
   - component: {fileID: 2077132773}
+  - component: {fileID: 2077132775}
   m_Layer: 5
   m_Name: Hero
   m_TagString: Untagged
@@ -8787,7 +8803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -781, y: 29}
+  m_AnchoredPosition: {x: -762, y: 29}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077132773
@@ -8810,7 +8826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cfa67d23748c87c4f906a3b647ad7476, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc9aa7a25445925488eab6fd5194ce13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8828,6 +8844,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077132771}
   m_CullTransparentMesh: 1
+--- !u!114 &2077132775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077132771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1effc54473d1b4f4a930ce849bd8be7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078769277
 GameObject:
   m_ObjectHideFlags: 0
@@ -9067,7 +9095,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: 
 --- !u!222 &2130573442
 CanvasRenderer:
   m_ObjectHideFlags: 0
