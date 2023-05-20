@@ -67,7 +67,7 @@ public class CheckInput : MonoBehaviour
                     int id = contador; // Usar o contador como chave
                     DestroyObject(id);
                 }
-                if (t > timings[contador] - 2 && t < timings[contador] + 2)
+                if (t > timings[contador] - 6 && t < timings[contador] + 6)
                 {
                     combocounter++;
                 }
