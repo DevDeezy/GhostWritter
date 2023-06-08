@@ -127,4 +127,9 @@ public class CheckInput : MonoBehaviour
             Destroy(objectToDestroy);
         }
     }
+
+    public void Vida()
+    {
+        label.GetComponent<Text>().text = "<color=green> Parabéns, nível finalizado! </color>";
+    }
 }
