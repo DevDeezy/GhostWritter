@@ -11,7 +11,7 @@ public class CheckInput : MonoBehaviour
     public InputField input;
     public string[] letra = { "Tequila ", "Tequila ", "Tequila " };
     public string[] letraEcra = { "Tequila ", "Tequila ", "Tequila " };
-    public int[] timings = { 52, 95, 128 };
+    public int[] timings = { 1, 7, 10 };
     public int contador = 0;
     public int tamanho = 0;
     public string text;
@@ -21,6 +21,7 @@ public class CheckInput : MonoBehaviour
     private int combocounter;
     public int spawnContador = 0;
     private Dictionary<int, GameObject> spawnedObjects = new Dictionary<int, GameObject>();
+    public int id;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,10 @@ public class CheckInput : MonoBehaviour
         {
             combo.text = "Combo: " + combocounter;
         }
+        else
+        {
+            combo.text = null;
+        }
 
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
@@ -58,16 +63,16 @@ public class CheckInput : MonoBehaviour
         {
             label.GetComponent<Text>().text = "<color=green> Parabéns, nível finalizado! </color>";
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (input.text.ToString() == letra[contador])
             {
-                if (spawnedObjects.Count > 0)
+                if (spawnedObjects.ContainsKey(contador))
                 {
-                    int id = contador; // Usar o contador como chave
+                    id = contador; // Usar o contador como chave
                     DestroyObject(id);
                 }
-                if (t > timings[contador] - 6 && t < timings[contador] + 6)
+                if (t > timings[contador] - 2 && t < timings[contador] + 2)
                 {
                     combocounter++;
                 }
@@ -82,7 +87,7 @@ public class CheckInput : MonoBehaviour
                     text += letraEcra[i];
                 }
                 label.GetComponent<Text>().text = text;
-                contador++;
+                contador += 1;
                 input.text = null;
             }
             else
@@ -109,7 +114,7 @@ public class CheckInput : MonoBehaviour
             new Vector3(1721, 569, 0),
             enemy.transform.rotation
         );
-        spawnedObjects.Add(contador, newEnemy); // Usar o contador como chave e o novo inimigo como valor
+        spawnedObjects.Add(spawnContador, newEnemy); // Usar o spawnContador como chave e o novo inimigo como valor
         newEnemy.transform.SetParent(transform);
     }
 

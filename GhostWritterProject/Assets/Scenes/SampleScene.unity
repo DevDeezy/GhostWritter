@@ -5135,13 +5135,14 @@ MonoBehaviour:
   - 'Tequila '
   - 'Tequila '
   - 'Tequila '
-  timings: 340000005f00000080000000e7030000
+  timings: 01000000070000000a000000e7030000
   contador: 0
   tamanho: 0
   text: 
   timerText: {fileID: 107524945}
   combo: {fileID: 356746332}
   spawnContador: 0
+  id: 0
 --- !u!1 &1065339059
 GameObject:
   m_ObjectHideFlags: 0
@@ -9225,9 +9226,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 41040201}
     m_Modifications:
     - target: {fileID: 3964294408272763716, guid: 1e64ea7928e2c2247aeef1d3dbd14913, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 2077132771}
+    - target: {fileID: 3964294408272763716, guid: 1e64ea7928e2c2247aeef1d3dbd14913, type: 3}
+      propertyPath: label
+      value: 
+      objectReference: {fileID: 1963784761}
+    - target: {fileID: 3964294408272763716, guid: 1e64ea7928e2c2247aeef1d3dbd14913, type: 3}
       propertyPath: heroLife
       value: 
       objectReference: {fileID: 1097706065}
+    - target: {fileID: 3964294408272763716, guid: 1e64ea7928e2c2247aeef1d3dbd14913, type: 3}
+      propertyPath: damagePerEnemie
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3964294408272763720, guid: 1e64ea7928e2c2247aeef1d3dbd14913, type: 3}
       propertyPath: m_Name
       value: Enemy
