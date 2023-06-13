@@ -8,7 +8,6 @@ public class enemieMovement : MonoBehaviour
     Vector3 tempPos;
     public GameObject enemy;
     public GameObject hero;
-    public Text heroLife;
     public int life;
     public int damagePerEnemie;
     HeroLife1 checkInput;
@@ -17,9 +16,7 @@ public class enemieMovement : MonoBehaviour
     void Start()
     {
         checkInput = GameObject.FindGameObjectWithTag("Needed").GetComponent<HeroLife1>();
-        life = 100;
         damagePerEnemie = 50;
-        heroLife.text = "HP: 100";
     }
 
     // Update is called once per frame

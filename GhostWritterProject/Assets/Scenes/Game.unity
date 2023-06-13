@@ -5178,6 +5178,7 @@ MonoBehaviour:
   text: 
   timerText: {fileID: 107524945}
   combo: {fileID: 356746332}
+  heroLife: {fileID: 1097706065}
   spawnContador: 0
   id: 0
 --- !u!1 &1031767706

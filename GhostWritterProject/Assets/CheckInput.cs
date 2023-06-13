@@ -17,6 +17,7 @@ public class CheckInput : MonoBehaviour
     public string text;
     public Text timerText;
     public Text combo;
+    public Text heroLife;
     private float startTime;
     private int combocounter;
     public int spawnContador = 0;
@@ -34,6 +35,7 @@ public class CheckInput : MonoBehaviour
         }
         label.GetComponent<Text>().text = text;
         combo.text = null;
+        heroLife.text = "HP: 100";
     }
 
     // Update is called once per frame
