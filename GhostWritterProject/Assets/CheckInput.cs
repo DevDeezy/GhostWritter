@@ -9,9 +9,9 @@ public class CheckInput : MonoBehaviour
     public GameObject hero;
     public GameObject enemy;
     public InputField input;
-    public string[] letra = { "Tequila ", "Tequila ", "Tequila " };
-    public string[] letraEcra = { "Tequila ", "Tequila ", "Tequila " };
-    public int[] timings = { 1, 7, 10 };
+    public string[] letra;
+    public string[] letraEcra;
+    public int[] timings;
     public int contador = 0;
     public int tamanho = 0;
     public string text;
@@ -29,7 +29,7 @@ public class CheckInput : MonoBehaviour
     {
         startTime = Time.time;
         tamanho = letra.Length;
-        for (int i = 0; i < tamanho; i++)
+        for (int i = 0; i < 5; i++)
         {
             text += letraEcra[i];
         }
@@ -84,7 +84,7 @@ public class CheckInput : MonoBehaviour
                 }
                 letraEcra[contador] = "<color=green>" + letra[contador] + "</color>";
                 text = "";
-                for (int i = 0; i < tamanho; i++)
+                for (int i = contador; i < (contador + 5); i++)
                 {
                     text += letraEcra[i];
                 }
@@ -98,7 +98,7 @@ public class CheckInput : MonoBehaviour
                 text = "";
                 combocounter = 0;
 
-                for (int i = 0; i < tamanho; i++)
+                for (int i = contador; i < (contador + 5); i++)
                 {
                     text += letraEcra[i];
                 }
