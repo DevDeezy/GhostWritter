@@ -511,7 +511,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031767709}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: BackScene
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_text: "O jogo tem como objetivo testar a tua rapidez e sabedoria da m\xFAsica.
     \r\n\nPara conseguires progredir, escreve a palavra que aparecer e carrega no
     \"Space\". \r\n\nPrecisas de ser assertivo quando escreves as palavras da m\xFAsica
-    consuante a musica vai tocando para que consigas acumular combo."
+    para que consigas acumular um bom combo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

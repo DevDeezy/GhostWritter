@@ -7,9 +7,20 @@ public class MainMenuController : MonoBehaviour
 {
     public CanvasGroup OptionPanel;
 
+    int MenuIndex = 0;
+    int TutorialIndex = 1;
+    int RulesIndex = 2;
+    int WinIndex = 3;
+    int LoseIndex = 4;
+
     public void PlayTutorial()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(TutorialIndex);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene(MenuIndex);
     }
 
     public void SelectLevel()
@@ -20,33 +31,28 @@ public class MainMenuController : MonoBehaviour
 
     public void LevelEasy()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(TutorialIndex);
     }
 
     public void LevelMedium()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(TutorialIndex);
     }
 
     public void LevelHard()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(TutorialIndex);
     }
 
     public void Rules()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(RulesIndex);
     }
 
     public void Back()
     {
         OptionPanel.alpha = 0;
         OptionPanel.blocksRaycasts = false;
-    }
-
-    public void BackScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
     public void QuitGame()
