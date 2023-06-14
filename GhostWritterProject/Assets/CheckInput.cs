@@ -67,30 +67,33 @@ public class CheckInput : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (input.text.ToString() == letra[contador])
+            if (t > timings[contador] - 4)
             {
-                if (spawnedObjects.ContainsKey(contador))
+                if (input.text.ToString() == letra[contador])
                 {
-                    id = contador; // Usar o contador como chave
-                    DestroyObject(id);
+                    if (spawnedObjects.ContainsKey(contador))
+                    {
+                        id = contador;
+                        DestroyObject(id);
+                    }
+                    if (t > timings[contador] - 2 && t < timings[contador] + 2)
+                    {
+                        combocounter++;
+                    }
+                    else
+                    {
+                        combocounter = 0;
+                    }
+                    letraEcra[contador] = "<color=green>" + letra[contador] + "</color>";
+                    text = "";
+                    for (int i = contador; i < (contador + 5); i++)
+                    {
+                        text += letraEcra[i];
+                    }
+                    label.GetComponent<Text>().text = text;
+                    contador += 1;
+                    input.text = null;
                 }
-                if (t > timings[contador] - 2 && t < timings[contador] + 2)
-                {
-                    combocounter++;
-                }
-                else
-                {
-                    combocounter = 0;
-                }
-                letraEcra[contador] = "<color=green>" + letra[contador] + "</color>";
-                text = "";
-                for (int i = contador; i < (contador + 5); i++)
-                {
-                    text += letraEcra[i];
-                }
-                label.GetComponent<Text>().text = text;
-                contador += 1;
-                input.text = null;
             }
             else
             {

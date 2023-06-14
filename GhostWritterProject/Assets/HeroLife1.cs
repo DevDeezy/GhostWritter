@@ -19,7 +19,7 @@ public class HeroLife1 : MonoBehaviour
 
     public void Vida()
     {
-        vidas -= 50;
+        vidas -= 10;
         vidaLabel.text = "HP: " + vidas;
     }
 }
