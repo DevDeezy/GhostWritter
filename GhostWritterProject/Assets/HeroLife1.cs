@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeroLife1 : MonoBehaviour
 {
@@ -21,5 +22,7 @@ public class HeroLife1 : MonoBehaviour
     {
         vidas -= 10;
         vidaLabel.text = "HP: " + vidas;
+        if (vidas <= 0)
+            SceneManager.LoadScene(4);
     }
 }

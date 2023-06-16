@@ -11,7 +11,7 @@ public class CheckInput : MonoBehaviour
     public InputField input;
     public string[] letra;
     public string[] letraEcra;
-    public int[] timings;
+    public float[] timings;
     public int contador = 0;
     public int tamanho = 0;
     public string text;
@@ -56,7 +56,7 @@ public class CheckInput : MonoBehaviour
         float segundos = (t % 60);
         timerText.text = minutes + ":" + seconds;
 
-        if (t > (timings[spawnContador] - 4))
+        if (t > (timings[spawnContador] - 1))
         {
             spawnEnemys();
             spawnContador++;
@@ -67,7 +67,7 @@ public class CheckInput : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (t > timings[contador] - 4)
+            if (t > timings[contador] - 1)
             {
                 if (input.text.ToString() == letra[contador])
                 {
@@ -76,7 +76,7 @@ public class CheckInput : MonoBehaviour
                         id = contador;
                         DestroyObject(id);
                     }
-                    if (t > timings[contador] - 2 && t < timings[contador] + 2)
+                    if (t > timings[contador] - 1 && t < timings[contador] + 1)
                     {
                         combocounter++;
                     }
