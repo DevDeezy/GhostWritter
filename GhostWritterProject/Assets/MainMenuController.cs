@@ -12,6 +12,9 @@ public class MainMenuController : MonoBehaviour
     int RulesIndex = 2;
     int WinIndex = 3;
     int LoseIndex = 4;
+    int EasyIndex = 5;
+    int MediumIndex = 6;
+    int HardIndex = 7;
 
     public void PlayTutorial()
     {
@@ -31,17 +34,17 @@ public class MainMenuController : MonoBehaviour
 
     public void LevelEasy()
     {
-        SceneManager.LoadScene(TutorialIndex);
+        SceneManager.LoadScene(EasyIndex);
     }
 
     public void LevelMedium()
     {
-        SceneManager.LoadScene(TutorialIndex);
+        SceneManager.LoadScene(MediumIndex);
     }
 
     public void LevelHard()
     {
-        SceneManager.LoadScene(TutorialIndex);
+        SceneManager.LoadScene(HardIndex);
     }
 
     public void Rules()
@@ -60,4 +63,3 @@ public class MainMenuController : MonoBehaviour
         Application.Quit();
     }
 }
-
