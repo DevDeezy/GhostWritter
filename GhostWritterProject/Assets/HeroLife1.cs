@@ -20,7 +20,7 @@ public class HeroLife1 : MonoBehaviour
 
     public void Vida()
     {
-        vidas -= 0;
+        vidas -= 10;
         vidaLabel.text = "HP: " + vidas;
         if (vidas <= 0)
             SceneManager.LoadScene(4);
