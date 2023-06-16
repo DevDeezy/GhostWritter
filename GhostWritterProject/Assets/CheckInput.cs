@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CheckInput : MonoBehaviour
 {
@@ -61,53 +62,57 @@ public class CheckInput : MonoBehaviour
             spawnEnemys();
             spawnContador++;
         }
-        if (contador == tamanho)
-        {
-            label.GetComponent<Text>().text = "<color=green> Parabéns, nível finalizado! </color>";
-        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (t > timings[contador] - 1)
+            if (letra[contador + 6] == "%GAMEWIN%")
             {
-                if (input.text.ToString() == letra[contador])
+                SceneManager.LoadScene(3);
+            }
+            else
+            {
+                if (t > timings[contador] - 1)
                 {
-                    if (spawnedObjects.ContainsKey(contador))
+                    if (input.text.ToString() == letra[contador])
                     {
-                        id = contador;
-                        DestroyObject(id);
+                        if (spawnedObjects.ContainsKey(contador))
+                        {
+                            id = contador;
+                            DestroyObject(id);
+                        }
+                        if (t > timings[contador] - 1 && t < timings[contador] + 1)
+                        {
+                            combocounter++;
+                        }
+                        else
+                        {
+                            combocounter = 0;
+                        }
+                        letraEcra[contador] = "<color=green>" + letra[contador] + "</color>";
+                        text = "";
+                        for (int i = contador; i < (contador + 5); i++)
+                        {
+                            text += letraEcra[i];
+                        }
+                        label.GetComponent<Text>().text = text;
+                        contador += 1;
+                        input.text = null;
                     }
-                    if (t > timings[contador] - 1 && t < timings[contador] + 1)
-                    {
-                        combocounter++;
-                    }
-                    else
-                    {
-                        combocounter = 0;
-                    }
-                    letraEcra[contador] = "<color=green>" + letra[contador] + "</color>";
+                }
+                else
+                {
+                    letraEcra[contador] = "<color=red>" + letra[contador] + "</color>";
                     text = "";
+                    combocounter = 0;
+
                     for (int i = contador; i < (contador + 5); i++)
                     {
                         text += letraEcra[i];
                     }
                     label.GetComponent<Text>().text = text;
-                    contador += 1;
+
                     input.text = null;
                 }
-            }
-            else
-            {
-                letraEcra[contador] = "<color=red>" + letra[contador] + "</color>";
-                text = "";
-                combocounter = 0;
-
-                for (int i = contador; i < (contador + 5); i++)
-                {
-                    text += letraEcra[i];
-                }
-                label.GetComponent<Text>().text = text;
-
-                input.text = null;
             }
         }
     }
@@ -135,6 +140,6 @@ public class CheckInput : MonoBehaviour
 
     public void Vida()
     {
-        label.GetComponent<Text>().text = "<color=green> Parabéns, nível finalizado! </color>";
+        label.GetComponent<Text>().text = "";
     }
 }

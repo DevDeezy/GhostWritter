@@ -1281,7 +1281,7 @@ SpriteRenderer:
   m_Size: {x: 6.92, y: 5.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &169470483
@@ -5165,46 +5165,35 @@ MonoBehaviour:
   enemy: {fileID: 1924388580}
   input: {fileID: 1013538547}
   letra:
-  - 'Welcome '
-  - 'to '
-  - 'your '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
+  - 'Tequila '
+  - 'Tequila '
+  - 'Tequila '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
   letraEcra:
-  - 'Welcome '
-  - 'to '
-  - 'your '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  - 'life '
-  timings: 07000000090000000a000000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000e7030000
+  - 'Tequila '
+  - 'Tequila '
+  - 'Tequila '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
+  timings:
+  - 52
+  - 96
+  - 130
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
   contador: 0
   tamanho: 0
   text: 

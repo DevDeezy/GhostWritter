@@ -1281,7 +1281,7 @@ SpriteRenderer:
   m_Size: {x: 6.92, y: 5.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &169470483
@@ -5352,6 +5352,12 @@ MonoBehaviour:
   - 'is '
   - 'never '
   - 'over '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
   letraEcra:
   - 'Work '
   - 'it '
@@ -5540,6 +5546,12 @@ MonoBehaviour:
   - 'is '
   - 'never '
   - 'over '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
   timings:
   - 51.7
   - 52.2
@@ -5728,6 +5740,12 @@ MonoBehaviour:
   - 159.2
   - 159.6
   - 160
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
   contador: 0
   tamanho: 0
   text: 

@@ -1281,7 +1281,7 @@ SpriteRenderer:
   m_Size: {x: 6.92, y: 5.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &169470483
@@ -5260,6 +5260,12 @@ MonoBehaviour:
   - 'yes '
   - 'to '
   - 'me '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
   letraEcra:
   - 'If '
   - 'you '
@@ -5356,6 +5362,12 @@ MonoBehaviour:
   - 'yes '
   - 'to '
   - 'me '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - ' '
+  - '%GAMEWIN%'
   timings:
   - 17.6
   - 18
@@ -5452,6 +5464,14 @@ MonoBehaviour:
   - 100.1
   - 100.8
   - 101.5
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999
   contador: 0
   tamanho: 0
   text: 
